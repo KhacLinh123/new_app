@@ -1,0 +1,8 @@
+<div cdkDrag>
+    <div [objectDynamic]="group" [elementGroup]="elementGroup" appHandleEventDynamicGroup (someEvent)="callSomethingOnParent($event)">
+        {{group.name}}
+    </div>
+    <div>
+        <ng-container #dynamicGroup></ng-container>
+    </div>
+</div>
