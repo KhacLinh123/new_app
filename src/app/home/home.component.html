@@ -1,110 +1,71 @@
-<!-- <div class="example-container">
-  <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let item of items" cdkDrag>{{item}}</div>
+<header style="height:50px">
+
+</header>
+<div class="row">
+  <div class="col-md-2">
   </div>
-</div>
+  <div class="col-md-1">
+    <nav class="sidebar flex-column-nowrap" style="background-color: transparent; box-shadow: none">
+      <a class="sidebar__logo" style="margin:0px 0px 40px 40px;">
+        <abbr class="logo">FB</abbr>
+      </a>
 
-<div class="example-container">
+      <ul cdkDropList (cdkDropListDropped)="drop($event)" class="sidebar__nav-list flex-column-nowrap" role="menubar"
+        aria-label="Main desktop menu">
 
-</div>
+        <li cdkDrag class="nav-list__item about-me active fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%">
+            <img src="../../assets/images/folder.png" alt="folfer" width="90%" height="90%">
+          </a>
+        </li>
 
-<div class="example-container">
-  <div class="example-box">Propeties</div>
-  <label [hidden] = "titlehidden" class="example-box" >{{title}}</label>
-  <input [hidden] = "namehidden" class="example-box" type="text" value="{{name}}">
-  <label [hidden] = "datahidden" class="example-box">{{data}}</label>
-  <input [hidden] = "valuehidden" class="example-box" type="text" value="{{value}}">
-</div> -->
+        <li cdkDrag class="nav-list__item skills fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%">
+            <img src="../../assets/images/newspaper.png" alt="folfer" width="90%" height="90%">
+          </a>
+        </li>
 
+        <li cdkDrag class="nav-list__item my-work fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%">
+            <img src="../../assets/images/radio-button.png" alt="folfer" width="90%" height="90%" margin-bottom="50%">
+          </a>
+        </li>
 
-<!-- Hóa -->
+        <li cdkDrag class="nav-list__item contact fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%">
+            <img src="../../assets/images/check.png" alt="folfer" width="90%" height="90%">
+          </a>
+        </li>
 
-<!-- <div class="example-container">
-  <h2 style="color:white">To do</h2>
-  <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)">
-    <div class="example-box" *ngFor="let item of todo" cdkDrag (CdkDragEnd)="drop($event)">{{item}}</div>
+        <li cdkDrag class="nav-list__item skills fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%">
+            <img src="../../assets/images/drop-down.png" alt="folfer" width="90%" height="90%">
+          </a>
+        </li>
+
+        <li cdkDrag class="nav-list__item my-work fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%">
+            <img src="../../assets/images/uploading-option.png" alt="folfer" width="90%" height="90%">
+          </a>
+        </li>
+
+        <li cdkDrag class="nav-list__item my-work fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%">
+            <img src="../../assets/images/attachfile.png" alt="folfer" width="90%" height="90%">
+          </a>
+        </li>
+
+      </ul>
+      <ul class="sidebar__extra-content" role="menu">
+      </ul>
+    </nav>
   </div>
-  <h2 style="color:white">Box</h2>
-  <div cdkDropList class="example-list" (cdkDropListDropped)="dropSecond($event)">
-    <div class="example-box" cdkDrag (CdkDragEnd)="dropSecond($event)">Box</div>
+  <div class="col-md-7" style="background-color:whitesmoke; height: 500px;">
+      <ng-container #dynamic></ng-container>
   </div>
-</div>
-
-<div class="example-container2">
-  <h2 style="color:white">Done</h2>
-  <div class="example-list" (cdkDropListDropped)="drop($event)">
-    <ng-container #dynamic></ng-container>
-    <div class="example-box"></div>
-  </div>
-</div>
-
-<div class="example-container">
-  <h2 style="color:white">Properties</h2>
-  <ng-container #dynamicproperty></ng-container>
-</div> -->
-
-<section id="desktop-menu" class="desktop-menu">
-  <nav class="sidebar flex-column-nowrap" style="margin: 0px 0px 0px -618px; background-color: transparent; box-shadow: none;width: 100px;">
-    <a class="sidebar__logo" style="margin:0px 0px 40px 40px;">
-      <abbr class="logo">FB</abbr>
-    </a>
-
-    <ul cdkDropList (cdkDropListDropped)="drop($event)" class="sidebar__nav-list flex-column-nowrap" role="menubar"
-      aria-label="Main desktop menu">
-
-      <li cdkDrag class="nav-list__item about-me active fake-button flex-column-nowrap" role="menuitem">
-        <a class="flex-row-wrap" tabindex="0">
-          <img src="../../assets/images/folder.png" alt="folfer" width="50" height="50">
-        </a>
-      </li>
-
-      <li cdkDrag class="nav-list__item skills fake-button flex-column-nowrap" role="menuitem">
-        <a class="flex-row-wrap" tabindex="0">
-          <img src="../../assets/images/newspaper.png" alt="folfer" width="50" height="50">
-        </a>
-      </li>
-
-      <li cdkDrag class="nav-list__item my-work fake-button flex-column-nowrap" role="menuitem">
-        <a class="flex-row-wrap" tabindex="0">
-          <img src="../../assets/images/radio-button.png" alt="folfer" width="50" height="50">
-        </a>
-      </li>
-
-      <li cdkDrag class="nav-list__item contact fake-button flex-column-nowrap" role="menuitem">
-        <a class="flex-row-wrap" tabindex="0">
-          <img src="../../assets/images/check.png" alt="folfer" width="50" height="50">
-        </a>
-      </li>
-
-      <li cdkDrag class="nav-list__item skills fake-button flex-column-nowrap" role="menuitem">
-        <a class="flex-row-wrap" tabindex="0">
-          <img src="../../assets/images/drop-down.png" alt="folfer" width="50" height="50">
-        </a>
-      </li>
-
-      <li cdkDrag class="nav-list__item my-work fake-button flex-column-nowrap" role="menuitem">
-        <a class="flex-row-wrap" tabindex="0">
-          <img src="../../assets/images/uploading-option.png" alt="folfer" width="50" height="50">
-        </a>
-      </li>
-
-      <li cdkDrag class="nav-list__item my-work fake-button flex-column-nowrap" role="menuitem">
-        <a class="flex-row-wrap" tabindex="0">
-          <img src="../../assets/images/attachfile.png" alt="folfer" width="50" height="50">
-        </a>
-      </li>
-
-    </ul>
-    <ul class="sidebar__extra-content" role="menu">
-    </ul>
-  </nav>
-
-  <div id="main" style="border: 1px solid black; width: 900px; height: 640px; position: absolute; margin: 10px 0px 0px -490px; background-color: white;">
-    <ng-container #dynamic></ng-container>
-  </div>
-
-  <div id="right" style=" width: 200px; height: 500px; position: absolute; margin: 92px 0px 0px 431px; font-family:'Numans', sans-serif;color: aqua; ">
-    <h2 class="card-title"> PROPETIES </h2>
+  <div class="col-md-2">
+    <h2 class="card-title" style="color:whitesmoke"> PROPETIES </h2>
     <ng-container #dynamicproperty></ng-container>
   </div>
-</section>
+</div>
+<footer></footer>

@@ -5,6 +5,7 @@ import { Group } from 'src/app/model/group';
     // tslint:disable-next-line:component-selector
     selector: 'dynamic-group-component',
     templateUrl: './dynamic-group.component.html',
+    styleUrls: ['./dynamic-group.component.scss'],
 })
 export class DynamicGroupComponent implements OnInit {
     @Input() group: Group;

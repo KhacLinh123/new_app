@@ -1,8 +1,7 @@
-<div cdkDrag>
-    <div [objectDynamic]="group" [elementGroup]="elementGroup" appHandleEventDynamicGroup (someEvent)="callSomethingOnParent($event)">
-        {{group.name}}
-    </div>
-    <div>
+<div class="col-3" cdkDrag style="font-size:12px;position: absolute;" (someEvent)="callSomethingOnParent($event)">
+    <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" [elementGroup]="elementGroup"
+            [objectDynamic]="group" appHandleEventDynamicGroup role="tab">{{group.name}}</a>
         <ng-container #dynamicGroup></ng-container>
     </div>
 </div>

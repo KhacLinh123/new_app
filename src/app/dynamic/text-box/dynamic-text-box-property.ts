@@ -6,7 +6,6 @@ import { TextBox } from '../../model/text-box';
     selector: 'dynamic-text-box-property-component',
     template: '<div>'
         + ' <p style="color:white">Title</p>' + '<input [(ngModel)]="textBox.title" />'
-        + '<p style="color:white">Value</p>' + '<input [(ngModel)]="textBox.value" />'
         + '</div>'
 })
 export class DynamicTextBoxPropertyComponent {

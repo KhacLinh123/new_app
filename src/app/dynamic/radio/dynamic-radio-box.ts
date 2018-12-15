@@ -3,8 +3,8 @@ import { Radio } from 'src/app/model/radio';
 
 @Component({
     // tslint:disable-next-line:component-selector
-    selector: 'dynamic-text-box-component',
-    template: '<div [objectDynamic]="radio" appHandleEventDynamicTextBox>{{radio.title}}</div>'
+    selector: 'dynamic-radio-component',
+    templateUrl: './dynamic-radio.component.html',
 })
 export class DynamicRadioComponent {
     @Input() radio: Radio;
