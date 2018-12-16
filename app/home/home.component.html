@@ -1,0 +1,71 @@
+<header style="height:50px">
+
+</header>
+<div class="row">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-1">
+    <nav class="sidebar flex-column-nowrap" style="background-color: transparent; box-shadow: none; border-style: none">
+      <a class="sidebar__logo" style="margin:0px 0px 40px 40px;">
+        <abbr class="logo">AS</abbr>
+      </a>
+
+      <ul cdkDropList (cdkDropListDropped)="drop($event)" class="sidebar__nav-list flex-column-nowrap" role="menubar"
+        aria-label="Main desktop menu">
+
+        <li cdkDrag class="nav-list__item about-me active fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70% ; border-style: none">
+            <img src="../../assets/images/folder.png" alt="folfer" width="90%" height="90%">
+          </a>
+        </li>
+
+        <li cdkDrag class="nav-list__item skills fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%; border-style: none">
+            <img src="../../assets/images/newspaper.png" alt="folfer" width="90%" height="90%">
+          </a>
+        </li>
+
+        <li cdkDrag class="nav-list__item my-work fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%; border-style: none">
+            <img src="../../assets/images/radio-button.png" alt="folfer" width="90%" height="90%" margin-bottom="50%">
+          </a>
+        </li>
+
+        <li cdkDrag class="nav-list__item contact fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%">
+            <img src="../../assets/images/check.png" alt="folfer" width="90%" height="90%">
+          </a>
+        </li>
+
+        <li cdkDrag class="nav-list__item skills fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%">
+            <img src="../../assets/images/drop-down.png" alt="folfer" width="90%" height="90%">
+          </a>
+        </li>
+
+        <li cdkDrag class="nav-list__item my-work fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%">
+            <img src="../../assets/images/uploading-option.png" alt="folfer" width="90%" height="90%">
+          </a>
+        </li>
+
+        <li cdkDrag class="nav-list__item my-work fake-button flex-column-nowrap" role="menuitem">
+          <a class="flex-row-wrap" tabindex="0" style="padding-bottom: 70%">
+            <img src="../../assets/images/attachfile.png" alt="folfer" width="90%" height="90%">
+          </a>
+        </li>
+
+      </ul>
+      <ul class="sidebar__extra-content" role="menu">
+      </ul>
+    </nav>
+  </div>
+  <div class="col-md-7" style=" height: 550px;">
+    <ng-container #dynamic></ng-container>
+  </div>
+  <div class="col-md-2">
+    <h2 class="card-title" style="color:whitesmoke; font-size: 30px"> PROPETIES </h2>
+    <ng-container #dynamicproperty></ng-container>
+  </div>
+</div>
+<footer></footer>
