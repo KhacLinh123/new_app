@@ -4,7 +4,9 @@ import { TextBox } from '../../model/text-box';
 @Component({
     // tslint:disable-next-line:component-selector
     selector: 'dynamic-text-box-component',
-    template: '<div [objectDynamic]="textBox" appHandleEventDynamicRadio>{{textBox.title}}</div>'
+    templateUrl: './dynamic-text-box.component.html',
+    styleUrls: ['./dynamic-text-box.component.scss'],
+
 })
 export class DynamicTextBoxComponent {
     @Input() textBox: TextBox;

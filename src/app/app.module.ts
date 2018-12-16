@@ -23,6 +23,18 @@ import { HandleEventDynamicTextBoxDirective } from './directive/handle-event-dyn
 import { DynamicRadioComponent } from './dynamic/radio/dynamic-radio-box';
 import { DynamicRadioPropertyComponent } from './dynamic/radio/dynamic-radio-property';
 import { HandleEventDynamicRadioDirective } from './directive/handle-event-dynamic-radio.directive';
+import { DynamicComboboxComponent } from './dynamic/combobox/dynamic-combobox';
+import { DynamicComboboxPropertyComponent } from './dynamic/combobox/dynamic-combobox-property';
+import { HandleEventDynamicComboboxDirective } from './directive/handle-event-dynamic-combobox.directive';
+import { DynamicAttachComponent } from './dynamic/attach/dynamic-attach';
+import { DynamicAttachPropertyComponent } from './dynamic/attach/dynamic-attach-property';
+import { HandleEventDynamicAttachDirective } from './directive/handle-evevt-dynamic-attach.directive';
+import { DynamicCheckboxComponent } from './dynamic/checkbox/dynamic-checkbox';
+import { DynamicCheckboxPropertyComponent } from './dynamic/checkbox/dynamic-checkbox-property';
+import { HandleEventDynamicCheckboxDirective } from './directive/handle-event-dynamic-checkbox.directive';
+import { DynamicUploadComponent } from './dynamic/upload/dynamic-upload';
+import { DynamicUploadPropertyComponent } from './dynamic/upload/dynamic-upload-property';
+import { HandleEventDynamicUploadDirective } from './directive/handle-event-dynamic-upload.directives';
 
 @NgModule({
   declarations: [
@@ -39,9 +51,21 @@ import { HandleEventDynamicRadioDirective } from './directive/handle-event-dynam
     DynamicGroupPropertyComponent,
     DynamicRadioComponent,
     DynamicRadioPropertyComponent,
+    DynamicComboboxComponent,
+    DynamicComboboxPropertyComponent,
+    DynamicCheckboxComponent,
+    DynamicCheckboxPropertyComponent,
+    DynamicAttachComponent,
+    DynamicAttachPropertyComponent,
+    DynamicUploadComponent,
+    DynamicUploadPropertyComponent,
+    HandleEventDynamicUploadDirective,
     HandleEventDynamicGroupDirective,
     HandleEventDynamicTextBoxDirective,
-    HandleEventDynamicRadioDirective
+    HandleEventDynamicComboboxDirective,
+    HandleEventDynamicCheckboxDirective,
+    HandleEventDynamicRadioDirective,
+    HandleEventDynamicAttachDirective
   ],
   imports: [
     BrowserModule,
@@ -55,7 +79,21 @@ import { HandleEventDynamicRadioDirective } from './directive/handle-event-dynam
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [DynamicTextBoxComponent, DynamicTextBoxPropertyComponent, DynamicGroupComponent,
-    DynamicGroupPropertyComponent, DynamicRadioComponent, DynamicRadioPropertyComponent]
+  entryComponents: [
+    DynamicTextBoxComponent, 
+    DynamicTextBoxPropertyComponent, 
+    DynamicGroupComponent,
+    DynamicGroupPropertyComponent, 
+    DynamicRadioComponent, 
+    DynamicRadioPropertyComponent,
+    DynamicComboboxComponent,
+    DynamicComboboxPropertyComponent,
+    DynamicCheckboxComponent,
+    DynamicCheckboxPropertyComponent,
+    DynamicUploadComponent,
+    DynamicUploadPropertyComponent,
+    DynamicAttachComponent,
+    DynamicAttachPropertyComponent,
+  ]
 })
 export class AppModule { }

@@ -10,6 +10,18 @@ import { DynamicGroupPropertyComponent } from '../dynamic/group/dynamic-group-pr
 import { Radio } from '../model/radio';
 import { DynamicRadioPropertyComponent } from '../dynamic/radio/dynamic-radio-property';
 import { DynamicRadioComponent } from '../dynamic/radio/dynamic-radio-box';
+import { ComboBox } from '../model/comboBox';
+import { DynamicComboboxPropertyComponent } from '../dynamic/combobox/dynamic-combobox-property';
+import { DynamicComboboxComponent } from '../dynamic/combobox/dynamic-combobox';
+import { Attach } from '../model/attach';
+import { DynamicAttachComponent } from '../dynamic/attach/dynamic-attach';
+import { DynamicAttachPropertyComponent } from '../dynamic/attach/dynamic-attach-property';
+import { DynamicCheckboxComponent } from '../dynamic/checkbox/dynamic-checkbox';
+import { Checkbox } from '../model/checkbox';
+import { DynamicCheckboxPropertyComponent } from '../dynamic/checkbox/dynamic-checkbox-property';
+import { DynamicUploadComponent } from '../dynamic/upload/dynamic-upload';
+import { Upload } from '../model/upload';
+import { DynamicUploadPropertyComponent } from '../dynamic/upload/dynamic-upload-property';
 
 @Injectable({
   providedIn: 'root'
@@ -110,6 +122,114 @@ export class DataService {
     const component = factory
       .create(this.dynamicPropertyViewContainer.parentInjector);
     component.instance['radio'] = radio;
+    this.dynamicPropertyViewContainer.clear();
+    this.dynamicPropertyViewContainer.insert(component.hostView);
+  }
+
+  /**
+   * Add Radio component
+   * @param radio Radio
+   */
+  addDynamicComboboxComponent(combobox: ComboBox) {
+    const factory = this.factoryResolver
+      .resolveComponentFactory(DynamicComboboxComponent);
+    const component = factory
+      .create(this.dynamicViewContainer.parentInjector);
+    component.instance['combobox'] = combobox;
+    this.dynamicViewContainer.insert(component.hostView);
+  }
+
+  /**
+   * Add property of Radio
+   * @param radio Radio
+   */
+  addDynamicComboboxPropertyComponent(combobox: ComboBox) {
+    const factory = this.factoryResolver
+      .resolveComponentFactory(DynamicComboboxPropertyComponent);
+    const component = factory
+      .create(this.dynamicPropertyViewContainer.parentInjector);
+    component.instance['combobox'] = combobox;
+    this.dynamicPropertyViewContainer.clear();
+    this.dynamicPropertyViewContainer.insert(component.hostView);
+  }
+
+  /**
+   * Add Checkbox component
+   * @param checkbox  Checkbox
+   */
+  addDynamicCheckboxComponent(checkbox: Checkbox) {
+    const factory = this.factoryResolver
+      .resolveComponentFactory(DynamicCheckboxComponent);
+    const component = factory
+      .create(this.dynamicViewContainer.parentInjector);
+    component.instance['checkbox'] = checkbox;
+    this.dynamicViewContainer.insert(component.hostView);
+  }
+
+  /**
+   * Add property of Radio
+   * @param radio Radio
+   */
+  addDynamicCheckboxPropertyComponent(checkbox: Checkbox) {
+    const factory = this.factoryResolver
+      .resolveComponentFactory(DynamicCheckboxPropertyComponent);
+    const component = factory
+      .create(this.dynamicPropertyViewContainer.parentInjector);
+    component.instance['checkbox'] = checkbox;
+    this.dynamicPropertyViewContainer.clear();
+    this.dynamicPropertyViewContainer.insert(component.hostView);
+  }
+
+  /**
+   * Add Radio component
+   * @param radio Radio
+   */
+  addDynamicUploadComponent(attach: Attach) {
+    const factory = this.factoryResolver
+      .resolveComponentFactory(DynamicUploadComponent);
+    const component = factory
+      .create(this.dynamicViewContainer.parentInjector);
+    component.instance['upload'] = attach;
+    this.dynamicViewContainer.insert(component.hostView);
+  }
+
+  /**
+   * Add property of Radio
+   * @param radio Radio
+   */
+  addDynamicUploadPropertyComponent(upload: Upload) {
+    const factory = this.factoryResolver
+      .resolveComponentFactory(DynamicUploadPropertyComponent);
+    const component = factory
+      .create(this.dynamicPropertyViewContainer.parentInjector);
+    component.instance['upload'] = upload;
+    this.dynamicPropertyViewContainer.clear();
+    this.dynamicPropertyViewContainer.insert(component.hostView);
+  }
+
+  /**
+   * Add Radio component
+   * @param radio Radio
+   */
+  addDynamicAttachComponent(attach: Attach) {
+    const factory = this.factoryResolver
+      .resolveComponentFactory(DynamicAttachComponent);
+    const component = factory
+      .create(this.dynamicViewContainer.parentInjector);
+    component.instance['attach'] = attach;
+    this.dynamicViewContainer.insert(component.hostView);
+  }
+
+  /**
+   * Add property of Radio
+   * @param radio Radio
+   */
+  addDynamicAttachPropertyComponent(attach: Attach) {
+    const factory = this.factoryResolver
+      .resolveComponentFactory(DynamicAttachPropertyComponent);
+    const component = factory
+      .create(this.dynamicPropertyViewContainer.parentInjector);
+    component.instance['attach'] = attach;
     this.dynamicPropertyViewContainer.clear();
     this.dynamicPropertyViewContainer.insert(component.hostView);
   }

@@ -3,7 +3,7 @@ import { Radio } from 'src/app/model/radio';
 
 @Component({
     // tslint:disable-next-line:component-selector
-    selector: 'dynamic-text-box-property-component',
+    selector: 'dynamic-radio-property-component',
     template: '<div>'
         + ' <p style="color:white">Title</p>' + '<input [(ngModel)]="radio.title" />'
         + '<p style="color:white">Value</p>' + '<input [(ngModel)]="radio.value" />'
